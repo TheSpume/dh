@@ -1,0 +1,44 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <meta charset="uft-8">
+        <style>
+            .box2{
+                position:absolute
+            }
+              .box1 {animation:my 10s infinite;
+                width:50px;
+                height:50px;
+                position:relative;/*利用浮动完成动画效果*/
+                -webkit-transition: width 2s,height 4s, transform 2s;/*旋转渐变效果，以实现动画效果*/
+            }
+            .box1:hover{
+            height:200px;
+            width:200px;
+            border-radius:100px;
+            transform:rotate(180deg);/*旋转*/
+           }
+           .box3{
+             background-color: brown;
+             width:180px;
+           }
+            @keyframes my
+            {
+                0%{background:Red;left:0px;top:0px;}
+                25%{background:blue;left:200px;top:0px;}
+                50%{background:yellow;left:200px;top:200px}
+                75%{background:green;left:0px;top:200px;}
+                100%{background:red;left:0px;top:0px;};
+            }
+            
+           
+           
+          
+        </style>
+    </head>
+    <body>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box3">鼠标接触动画+普通动画</div>
+    </body>
+</html>
